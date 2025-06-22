@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Generator</title>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+  <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h2 class="text-3xl font-extrabold mb-6 text-center text-indigo-700 drop-shadow-md">Password Generator</h2>
+
+    <div class="mb-5">
+      <label class="block mb-2 text-indigo-600 font-semibold">Password Length:</label>
+      <input
+        type="number"
+        id="length"
+        value="12"
+        class="w-full border border-indigo-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        min="4"
+        max="64"
+      />
+    </div>
+
+    <div class="mb-6 space-y-3 text-indigo-700 font-medium">
+      <label><input type="checkbox" id="upper" checked class="mr-2 accent-indigo-600" />Include Uppercase</label><br />
+      <label><input type="checkbox" id="lower" checked class="mr-2 accent-indigo-600" />Include Lowercase</label><br />
+      <label><input type="checkbox" id="number" checked class="mr-2 accent-indigo-600" />Include Numbers</label><br />
+      <label><input type="checkbox" id="symbol" checked class="mr-2 accent-indigo-600" />Include Symbols</label>
+    </div>
+
+    <button
+      id="generateBtn"
+      class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold p-3 rounded-md transition duration-300"
+    >
+      Generate
+    </button>
+
+    <div class="mt-6">
+      <label class="block mb-2 text-indigo-600 font-semibold">Generated Password:</label>
+      <input
+        type="text"
+        id="result"
+        readonly
+        class="w-full p-3 rounded-md border-2 border-indigo-400 bg-indigo-50 text-indigo-900 font-mono text-lg tracking-wide select-all"
+      />
+    </div>
+  </div>
+</body>
+</html>
